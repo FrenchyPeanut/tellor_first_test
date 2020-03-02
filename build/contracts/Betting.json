@@ -1,0 +1,729 @@
+{
+  "contractName": "Betting",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_requestId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getCurrentValue",
+      "outputs": [
+        {
+          "name": "ifRetrieve",
+          "type": "bool"
+        },
+        {
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "name": "_timestampRetrieved",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_request",
+          "type": "string"
+        },
+        {
+          "name": "_symbol",
+          "type": "string"
+        },
+        {
+          "name": "_granularity",
+          "type": "uint256"
+        },
+        {
+          "name": "_tip",
+          "type": "uint256"
+        }
+      ],
+      "name": "requestData",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_request",
+          "type": "string"
+        },
+        {
+          "name": "_symbol",
+          "type": "string"
+        },
+        {
+          "name": "_granularity",
+          "type": "uint256"
+        },
+        {
+          "name": "_tip",
+          "type": "uint256"
+        }
+      ],
+      "name": "requestDataWithEther",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_requestId",
+          "type": "uint256"
+        },
+        {
+          "name": "_timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "getFirstVerifiedDataAfter",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "_timestampRetrieved",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_requestId",
+          "type": "uint256"
+        },
+        {
+          "name": "_tip",
+          "type": "uint256"
+        }
+      ],
+      "name": "addTip",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_userContract",
+          "type": "address"
+        }
+      ],
+      "name": "setUserContract",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_requestId",
+          "type": "uint256"
+        },
+        {
+          "name": "_timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "getAnyDataAfter",
+      "outputs": [
+        {
+          "name": "_ifRetrieve",
+          "type": "bool"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        },
+        {
+          "name": "_timestampRetrieved",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_requestId",
+          "type": "uint256"
+        },
+        {
+          "name": "_tip",
+          "type": "uint256"
+        }
+      ],
+      "name": "addTipWithEther",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"_requestId\",\"type\":\"uint256\"}],\"name\":\"getCurrentValue\",\"outputs\":[{\"name\":\"ifRetrieve\",\"type\":\"bool\"},{\"name\":\"value\",\"type\":\"uint256\"},{\"name\":\"_timestampRetrieved\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_request\",\"type\":\"string\"},{\"name\":\"_symbol\",\"type\":\"string\"},{\"name\":\"_granularity\",\"type\":\"uint256\"},{\"name\":\"_tip\",\"type\":\"uint256\"}],\"name\":\"requestData\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_request\",\"type\":\"string\"},{\"name\":\"_symbol\",\"type\":\"string\"},{\"name\":\"_granularity\",\"type\":\"uint256\"},{\"name\":\"_tip\",\"type\":\"uint256\"}],\"name\":\"requestDataWithEther\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_requestId\",\"type\":\"uint256\"},{\"name\":\"_timestamp\",\"type\":\"uint256\"}],\"name\":\"getFirstVerifiedDataAfter\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"},{\"name\":\"\",\"type\":\"uint256\"},{\"name\":\"_timestampRetrieved\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_requestId\",\"type\":\"uint256\"},{\"name\":\"_tip\",\"type\":\"uint256\"}],\"name\":\"addTip\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_userContract\",\"type\":\"address\"}],\"name\":\"setUserContract\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_requestId\",\"type\":\"uint256\"},{\"name\":\"_timestamp\",\"type\":\"uint256\"}],\"name\":\"getAnyDataAfter\",\"outputs\":[{\"name\":\"_ifRetrieve\",\"type\":\"bool\"},{\"name\":\"_value\",\"type\":\"uint256\"},{\"name\":\"_timestampRetrieved\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_requestId\",\"type\":\"uint256\"},{\"name\":\"_tip\",\"type\":\"uint256\"}],\"name\":\"addTipWithEther\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_previousOwner\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"}],\"devdoc\":{\"details\":\"Allows parties to bet on x\",\"methods\":{\"addTip(uint256,uint256)\":{\"details\":\"Allows the user to tip miners for the specified request using Tributes\",\"params\":{\"_requestId\":\"to tip\",\"_tip\":\"amount\"}},\"addTipWithEther(uint256,uint256)\":{\"details\":\"Allows user to add tip with Ether by sending the ETH to the userContract and exchanging it for Tributes at the price specified by the userContract owner.\",\"params\":{\"_requestId\":\"to tip\",\"_tip\":\"amount\"}},\"getAnyDataAfter(uint256,uint256)\":{\"details\":\"Allows the user to get the first value for the requestId after the specified timestamp\",\"params\":{\"_requestId\":\"is the requestId to look up the value for\",\"_timestamp\":\"after which to search for first verified value\"},\"return\":\"bool true if it is able to retreive a value, the value, and the value's timestamp\"},\"getCurrentValue(uint256)\":{\"details\":\"Allows the user to get the latest value for the requestId specified\",\"params\":{\"_requestId\":\"is the requestId to look up the value for\"},\"return\":\"bool true if it is able to retreive a value, the value, and the value's timestamp\"},\"getFirstVerifiedDataAfter(uint256,uint256)\":{\"details\":\"Allows the user to get the first verified value for the requestId after the specified timestamp\",\"params\":{\"_requestId\":\"is the requestId to look up the value for\",\"_timestamp\":\"after which to search for first verified value\"},\"return\":\"bool true if it is able to retreive a value, the value, and the value's timestamp, the timestamp after which it searched for the first verified value\"},\"requestData(string,string,uint256,uint256)\":{\"details\":\"Allows the user to submit a request for data to the oracle using Tributes Allowing this prevents us from increasing spread too high (since if we set the price too hight users will just go to an exchange and get tokens from there)\",\"params\":{\"_granularity\":\"is the number of decimals miners should include on the submitted value\",\"_request\":\"string API being requested to be mined\",\"_symbol\":\"is the short string symbol for the api request\",\"_tip\":\"amount the requester is willing to pay to be get on queue. Miners mine the onDeckQueryHash, or the api with the highest payout pool\"}},\"requestDataWithEther(string,string,uint256,uint256)\":{\"details\":\"Allows the user to submit a request for data to the oracle using ETH\",\"params\":{\"_granularity\":\"is the number of decimals miners should include on the submitted value\",\"_request\":\"string API being requested to be mined\",\"_symbol\":\"is the short string symbol for the api request\",\"_tip\":\"amount the requester is willing to pay to be get on queue. Miners mine the onDeckQueryHash, or the api with the highest payout pool\"}},\"setUserContract(address)\":{\"details\":\"allows owner to set the user contract address\",\"params\":{\"_userContract\":\"address\"}},\"transferOwnership(address)\":{\"details\":\"allows owner to transfer ownership\",\"params\":{\"_newOwner\":\"address\"}}},\"title\":\"Betting contract\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/charles.beyer/sandboxStuff/tell/contracts/OracleWithTellor.sol\":\"Betting\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/charles.beyer/sandboxStuff/tell/contracts/OracleWithTellor.sol\":{\"keccak256\":\"0xa922ca86be8126e92af85db45e6ae97037b7e436e48105c4fc8b0ba5086d51e8\",\"urls\":[\"bzzr://56b94450e247cb4f66c9bfff2e61471f1e9a5aeeccc726dff54ffd7a565cea6e\"]},\"/Users/charles.beyer/sandboxStuff/tell/contracts/UserContract.sol\":{\"keccak256\":\"0x395aed1eeb6661251e779204cff1295eb49a5cc0d7180262279382cde35ea3f5\",\"urls\":[\"bzzr://6d51a9aa79afb762281d8df000e294a46ca27a9cda1347c4f70c3f82cefbdf83\"]},\"/Users/charles.beyer/sandboxStuff/tell/contracts/UsingTellor.sol\":{\"keccak256\":\"0xb848765e2db99d65b3828420d7e57f68182fa882d3b176307e25fbcba48f7e5d\",\"urls\":[\"bzzr://32f64f01fff8f8c7cf74200a78aaa7a1f3feab2bdb8fcca5d02d215e5f0d0ec9\"]},\"/Users/charles.beyer/sandboxStuff/tell/contracts/libraries/SafeMath.sol\":{\"keccak256\":\"0x835569f11965799f14a74288c6b76a8f6723c0b4bc45ba767e5ad060e71d704f\",\"urls\":[\"bzzr://e5b9dad8b6c4af43bf63b96d332f46c965fa36e25e934228a533ffd9d8f1a27d\"]},\"/Users/charles.beyer/sandboxStuff/tell/contracts/libraries/TellorGettersLibrary.sol\":{\"keccak256\":\"0xd7ba7aeb64a7eb89c3d02be1b4a11e9815d491cac3b71c669cb7c537ca5ba5d1\",\"urls\":[\"bzzr://83e6f66e8aa34b6ae56a54952c4e54ff47b05151e32815b17f3f461a7b05b63e\"]},\"/Users/charles.beyer/sandboxStuff/tell/contracts/libraries/TellorLibrary.sol\":{\"keccak256\":\"0x6542cd93b5412ed864fced079bf3a9c3321a283ed291e047c3fc0e5f90b30a1e\",\"urls\":[\"bzzr://17e5e9929cfaaef91172ab5298971e758cdd5a370dc60722b687ded04800927f\"]},\"/Users/charles.beyer/sandboxStuff/tell/contracts/libraries/TellorStorage.sol\":{\"keccak256\":\"0x15634e54d282ec350c3a9e0c6f7bfeb73121d7fbe6c1ed03ca594f984af87925\",\"urls\":[\"bzzr://aa8101894a2e3cf36fc1a0dbad1d964b11117e07f9013ef477cfb6a1d7fea987\"]},\"/Users/charles.beyer/sandboxStuff/tell/contracts/libraries/TellorTransfer.sol\":{\"keccak256\":\"0x3b0033957aed6e8b43e01b2d203aab9e7868ba5c873c219dc80f3a3e55a3c212\",\"urls\":[\"bzzr://8e87119edb2141bddde99fb3894f4147e4621069727fca9a3bdd6d0a97e2a9cc\"]},\"/Users/charles.beyer/sandboxStuff/tell/contracts/libraries/Utilities.sol\":{\"keccak256\":\"0xa4fddaeaf9246f07e7464bc7936ea47431316d96dc426e2daef9e4dab796bd4a\",\"urls\":[\"bzzr://255a321376bad89f829a1e25329aadbe03edf9773cb342b24c76910ca6e1b108\"]},\"/Users/charles.beyer/sandboxStuff/tell/contracts/tellor/Tellor.sol\":{\"keccak256\":\"0x093f2af8a4895fde683ea5194dab9b9f408c7de54b4b6960000994aba4544216\",\"urls\":[\"bzzr://e35f615b75ef9fddc700121186d269e44a9720696391dec923b50f6f9c3e0ba4\"]},\"/Users/charles.beyer/sandboxStuff/tell/contracts/tellor/TellorGetters.sol\":{\"keccak256\":\"0x8a56763f5095c975d6b9e059121932a0ea9ea0e2d0b5cc5f1b2646f4b1895120\",\"urls\":[\"bzzr://fb37f15cdedf161889065f92bd58a23aa9aa61f781facae2e272639b4b8d7a01\"]},\"/Users/charles.beyer/sandboxStuff/tell/contracts/tellor/TellorMaster.sol\":{\"keccak256\":\"0x9dc2a851f8369db9f09965dacfe18ba4c5d22fffc3bfade51f3c56e76c36a46c\",\"urls\":[\"bzzr://64ea11dfbcf67f768b2b9622ca9a4ef854efc338011450d002e6c7406e488a20\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.5.0;\n\nimport './UsingTellor.sol';\n/**\n * @title Betting contract\n * @dev Allows parties to bet on x\n*/\n\ncontract Betting is UsingTellor {\n\n    /*Variables*/\n    address public owner;\n\n    /*\n    @dev Start bet\n    */\n\tconstructor () public {\n    owner = msg.sender;\n\t}\n\n }",
+  "sourcePath": "/Users/charles.beyer/sandboxStuff/tell/contracts/OracleWithTellor.sol",
+  "ast": {
+    "absolutePath": "/Users/charles.beyer/sandboxStuff/tell/contracts/OracleWithTellor.sol",
+    "exportedSymbols": {
+      "Betting": [
+        53
+      ]
+    },
+    "id": 54,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 38,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "absolutePath": "/Users/charles.beyer/sandboxStuff/tell/contracts/UsingTellor.sol",
+        "file": "./UsingTellor.sol",
+        "id": 39,
+        "nodeType": "ImportDirective",
+        "scope": 54,
+        "sourceUnit": 761,
+        "src": "25:27:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 40,
+              "name": "UsingTellor",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 760,
+              "src": "143:11:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_UsingTellor_$760",
+                "typeString": "contract UsingTellor"
+              }
+            },
+            "id": 41,
+            "nodeType": "InheritanceSpecifier",
+            "src": "143:11:1"
+          }
+        ],
+        "contractDependencies": [
+          760
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Betting contract\n@dev Allows parties to bet on x",
+        "fullyImplemented": false,
+        "id": 53,
+        "linearizedBaseContracts": [
+          53,
+          760
+        ],
+        "name": "Betting",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 43,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 53,
+            "src": "180:20:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 42,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "180:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 51,
+              "nodeType": "Block",
+              "src": "259:28:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 49,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 46,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 43,
+                      "src": "265:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 47,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3867,
+                        "src": "273:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 48,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "273:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "265:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 50,
+                  "nodeType": "ExpressionStatement",
+                  "src": "265:18:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 52,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 44,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "249:2:1"
+            },
+            "returnParameters": {
+              "id": 45,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "259:0:1"
+            },
+            "scope": 53,
+            "src": "237:50:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 54,
+        "src": "123:168:1"
+      }
+    ],
+    "src": "0:291:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/charles.beyer/sandboxStuff/tell/contracts/OracleWithTellor.sol",
+    "exportedSymbols": {
+      "Betting": [
+        53
+      ]
+    },
+    "id": 54,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 38,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "absolutePath": "/Users/charles.beyer/sandboxStuff/tell/contracts/UsingTellor.sol",
+        "file": "./UsingTellor.sol",
+        "id": 39,
+        "nodeType": "ImportDirective",
+        "scope": 54,
+        "sourceUnit": 761,
+        "src": "25:27:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 40,
+              "name": "UsingTellor",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 760,
+              "src": "143:11:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_UsingTellor_$760",
+                "typeString": "contract UsingTellor"
+              }
+            },
+            "id": 41,
+            "nodeType": "InheritanceSpecifier",
+            "src": "143:11:1"
+          }
+        ],
+        "contractDependencies": [
+          760
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Betting contract\n@dev Allows parties to bet on x",
+        "fullyImplemented": false,
+        "id": 53,
+        "linearizedBaseContracts": [
+          53,
+          760
+        ],
+        "name": "Betting",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 43,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 53,
+            "src": "180:20:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 42,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "180:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 51,
+              "nodeType": "Block",
+              "src": "259:28:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 49,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 46,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 43,
+                      "src": "265:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 47,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3867,
+                        "src": "273:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 48,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "273:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "265:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 50,
+                  "nodeType": "ExpressionStatement",
+                  "src": "265:18:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 52,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 44,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "249:2:1"
+            },
+            "returnParameters": {
+              "id": 45,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "259:0:1"
+            },
+            "scope": 53,
+            "src": "237:50:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 54,
+        "src": "123:168:1"
+      }
+    ],
+    "src": "0:291:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.13",
+  "updatedAt": "2020-03-02T10:49:38.307Z",
+  "devdoc": {
+    "details": "Allows parties to bet on x",
+    "methods": {
+      "addTip(uint256,uint256)": {
+        "details": "Allows the user to tip miners for the specified request using Tributes",
+        "params": {
+          "_requestId": "to tip",
+          "_tip": "amount"
+        }
+      },
+      "addTipWithEther(uint256,uint256)": {
+        "details": "Allows user to add tip with Ether by sending the ETH to the userContract and exchanging it for Tributes at the price specified by the userContract owner.",
+        "params": {
+          "_requestId": "to tip",
+          "_tip": "amount"
+        }
+      },
+      "getAnyDataAfter(uint256,uint256)": {
+        "details": "Allows the user to get the first value for the requestId after the specified timestamp",
+        "params": {
+          "_requestId": "is the requestId to look up the value for",
+          "_timestamp": "after which to search for first verified value"
+        },
+        "return": "bool true if it is able to retreive a value, the value, and the value's timestamp"
+      },
+      "getCurrentValue(uint256)": {
+        "details": "Allows the user to get the latest value for the requestId specified",
+        "params": {
+          "_requestId": "is the requestId to look up the value for"
+        },
+        "return": "bool true if it is able to retreive a value, the value, and the value's timestamp"
+      },
+      "getFirstVerifiedDataAfter(uint256,uint256)": {
+        "details": "Allows the user to get the first verified value for the requestId after the specified timestamp",
+        "params": {
+          "_requestId": "is the requestId to look up the value for",
+          "_timestamp": "after which to search for first verified value"
+        },
+        "return": "bool true if it is able to retreive a value, the value, and the value's timestamp, the timestamp after which it searched for the first verified value"
+      },
+      "requestData(string,string,uint256,uint256)": {
+        "details": "Allows the user to submit a request for data to the oracle using Tributes Allowing this prevents us from increasing spread too high (since if we set the price too hight users will just go to an exchange and get tokens from there)",
+        "params": {
+          "_granularity": "is the number of decimals miners should include on the submitted value",
+          "_request": "string API being requested to be mined",
+          "_symbol": "is the short string symbol for the api request",
+          "_tip": "amount the requester is willing to pay to be get on queue. Miners mine the onDeckQueryHash, or the api with the highest payout pool"
+        }
+      },
+      "requestDataWithEther(string,string,uint256,uint256)": {
+        "details": "Allows the user to submit a request for data to the oracle using ETH",
+        "params": {
+          "_granularity": "is the number of decimals miners should include on the submitted value",
+          "_request": "string API being requested to be mined",
+          "_symbol": "is the short string symbol for the api request",
+          "_tip": "amount the requester is willing to pay to be get on queue. Miners mine the onDeckQueryHash, or the api with the highest payout pool"
+        }
+      },
+      "setUserContract(address)": {
+        "details": "allows owner to set the user contract address",
+        "params": {
+          "_userContract": "address"
+        }
+      },
+      "transferOwnership(address)": {
+        "details": "allows owner to transfer ownership",
+        "params": {
+          "_newOwner": "address"
+        }
+      }
+    },
+    "title": "Betting contract"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
